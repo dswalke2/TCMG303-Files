@@ -1,0 +1,1051 @@
+client01.cfg                                                                                        0000644 0000000 0000000 00000007346 13752021602 011664  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   # Ubuntu Host configuration file1
+
+define host {
+        use                          linux-server
+        host_name                    client01
+        alias                        Ubuntu Host
+        address                      10.130.10.139 
+        register                     1
+}
+
+define service {
+      host_name                       client01
+      service_description             PING
+      check_command                   check_nrpe!check_ping
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client01
+      service_description             Check Users
+      check_command                   check_nrpe!check_users
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client01
+      service_description             Check SSH
+      check_command                   check_nrpe!check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client01
+      service_description             Check Root / Disk
+      check_command                   check_nrpe!check_root
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client01
+      service_description             Check APT Update
+      check_command                   check_nrpe!check_apt
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client01
+      service_description             Check HTTP
+      check_command                   check_nrpe!check_http
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+                                                                                                                                                                                                                                                                                          client02.cfg                                                                                        0000644 0000000 0000000 00000007345 13752045034 011671  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   # Ubuntu Host configuration file1
+
+define host {
+        use                          linux-server
+        host_name                    client02
+        alias                        Ubuntu Host
+        address                      10.130.10.140
+        register                     1
+}
+
+define service {
+      host_name                       client02
+      service_description             PING
+      check_command                   check_nrpe!check_ping
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client02
+      service_description             Check Users
+      check_command                   check_nrpe!check_users
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client02
+      service_description             Check SSH
+      check_command                   check_nrpe!check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client02
+      service_description             Check Root / Disk
+      check_command                   check_nrpe!check_root
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client02
+      service_description             Check APT Update
+      check_command                   check_nrpe!check_apt
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client02
+      service_description             Check HTTP
+      check_command                   check_nrpe!check_http
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+                                                                                                                                                                                                                                                                                           client03.cfg                                                                                        0000644 0000000 0000000 00000007346 13752045010 011665  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   # Ubuntu Host configuration file1
+
+define host {
+        use                          linux-server
+        host_name                    client03
+        alias                        Ubuntu Host
+        address                      10.130.10.12 
+        register                     1
+}
+
+define service {
+      host_name                       client03
+      service_description             PING
+      check_command                   check_nrpe!check_ping
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client03
+      service_description             Check Users
+      check_command                   check_nrpe!check_users
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client03
+      service_description             Check SSH
+      check_command                   check_nrpe!check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client03
+      service_description             Check Root / Disk
+      check_command                   check_nrpe!check_root
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client03
+      service_description             Check APT Update
+      check_command                   check_nrpe!check_apt
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client03
+      service_description             Check HTTP
+      check_command                   check_nrpe!check_http
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+                                                                                                                                                                                                                                                                                          client04.cfg                                                                                        0000644 0000000 0000000 00000007345 13752045107 011674  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   # Ubuntu Host configuration file1
+
+define host {
+        use                          linux-server
+        host_name                    client04
+        alias                        Ubuntu Host
+        address                      10.130.10.13
+        register                     1
+}
+
+define service {
+      host_name                       client04
+      service_description             PING
+      check_command                   check_nrpe!check_ping
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client04
+      service_description             Check Users
+      check_command                   check_nrpe!check_users
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client04
+      service_description             Check SSH
+      check_command                   check_nrpe!check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client04
+      service_description             Check Root / Disk
+      check_command                   check_nrpe!check_root
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client04
+      service_description             Check APT Update
+      check_command                   check_nrpe!check_apt
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client04
+      service_description             Check HTTP
+      check_command                   check_nrpe!check_http
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+                                                                                                                                                                                                                                                                                           client05.cfg                                                                                        0000644 0000000 0000000 00000007345 13752045153 011676  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   # Ubuntu Host configuration file1
+
+define host {
+        use                          linux-server
+        host_name                    client05
+        alias                        Ubuntu Host
+        address                      10.130.10.15
+        register                     1
+}
+
+define service {
+      host_name                       client05
+      service_description             PING
+      check_command                   check_nrpe!check_ping
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client05
+      service_description             Check Users
+      check_command                   check_nrpe!check_users
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client05
+      service_description             Check SSH
+      check_command                   check_nrpe!check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client05
+      service_description             Check Root / Disk
+      check_command                   check_nrpe!check_root
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client05
+      service_description             Check APT Update
+      check_command                   check_nrpe!check_apt
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client05
+      service_description             Check HTTP
+      check_command                   check_nrpe!check_http
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+                                                                                                                                                                                                                                                                                           client06.cfg                                                                                        0000644 0000000 0000000 00000007346 13752045472 011704  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   # Ubuntu Host configuration file1
+
+define host {
+        use                          linux-server
+        host_name                    client06
+        alias                        Ubuntu Host
+        address                      10.130.10.88 
+        register                     1
+}
+
+define service {
+      host_name                       client06
+      service_description             PING
+      check_command                   check_nrpe!check_ping
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client06
+      service_description             Check Users
+      check_command                   check_nrpe!check_users
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client06
+      service_description             Check SSH
+      check_command                   check_nrpe!check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client06
+      service_description             Check Root / Disk
+      check_command                   check_nrpe!check_root
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client06
+      service_description             Check APT Update
+      check_command                   check_nrpe!check_apt
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client06
+      service_description             Check HTTP
+      check_command                   check_nrpe!check_http
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+                                                                                                                                                                                                                                                                                          client07.cfg                                                                                        0000644 0000000 0000000 00000007346 13752045507 011704  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   # Ubuntu Host configuration file1
+
+define host {
+        use                          linux-server
+        host_name                    client07
+        alias                        Ubuntu Host
+        address                      10.130.10.17 
+        register                     1
+}
+
+define service {
+      host_name                       client07
+      service_description             PING
+      check_command                   check_nrpe!check_ping
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client07
+      service_description             Check Users
+      check_command                   check_nrpe!check_users
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client07
+      service_description             Check SSH
+      check_command                   check_nrpe!check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client07
+      service_description             Check Root / Disk
+      check_command                   check_nrpe!check_root
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client07
+      service_description             Check APT Update
+      check_command                   check_nrpe!check_apt
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client07
+      service_description             Check HTTP
+      check_command                   check_nrpe!check_http
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+                                                                                                                                                                                                                                                                                          client08.cfg                                                                                        0000644 0000000 0000000 00000007345 13752045735 011707  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   # Ubuntu Host configuration file1
+
+define host {
+        use                          linux-server
+        host_name                    client08
+        alias                        Ubuntu Host
+        address                      10.130.10.81
+        register                     1
+}
+
+define service {
+      host_name                       client08
+      service_description             PING
+      check_command                   check_nrpe!check_ping
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client08
+      service_description             Check Users
+      check_command                   check_nrpe!check_users
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client08
+      service_description             Check SSH
+      check_command                   check_nrpe!check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client08
+      service_description             Check Root / Disk
+      check_command                   check_nrpe!check_root
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client08
+      service_description             Check APT Update
+      check_command                   check_nrpe!check_apt
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client08
+      service_description             Check HTTP
+      check_command                   check_nrpe!check_http
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+                                                                                                                                                                                                                                                                                           client09.cfg                                                                                        0000644 0000000 0000000 00000007346 13752046064 011705  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   # Ubuntu Host configuration file1
+
+define host {
+        use                          linux-server
+        host_name                    client09
+        alias                        Ubuntu Host
+        address                      10.130.10.44 
+        register                     1
+}
+
+define service {
+      host_name                       client09
+      service_description             PING
+      check_command                   check_nrpe!check_ping
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client09
+      service_description             Check Users
+      check_command                   check_nrpe!check_users
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client09
+      service_description             Check SSH
+      check_command                   check_nrpe!check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client09
+      service_description             Check Root / Disk
+      check_command                   check_nrpe!check_root
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client09
+      service_description             Check APT Update
+      check_command                   check_nrpe!check_apt
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client09
+      service_description             Check HTTP
+      check_command                   check_nrpe!check_http
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+                                                                                                                                                                                                                                                                                          client10.cfg                                                                                        0000644 0000000 0000000 00000007346 13752053625 011676  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   # Ubuntu Host configuration file1
+
+define host {
+        use                          linux-server
+        host_name                    client10
+        alias                        Ubuntu Host
+        address                      10.130.10.74 
+        register                     1
+}
+
+define service {
+      host_name                       client10
+      service_description             PING
+      check_command                   check_nrpe!check_ping
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client10
+      service_description             Check Users
+      check_command                   check_nrpe!check_users
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client10
+      service_description             Check SSH
+      check_command                   check_nrpe!check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client10
+      service_description             Check Root / Disk
+      check_command                   check_nrpe!check_root
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client10
+      service_description             Check APT Update
+      check_command                   check_nrpe!check_apt
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       client10
+      service_description             Check HTTP
+      check_command                   check_nrpe!check_http
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
